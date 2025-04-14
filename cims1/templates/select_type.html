@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Type</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Course Type</h1>
+    <p>Choose an option to view data:</p>
+    <div>
+        <a href="{{ url_for('view_graphs', course_type='UG', filepath=filepath) }}">View UG Graphs</a>
+        <a href="{{ url_for('view_table', course_type='UG', filepath=filepath) }}">View UG Table</a>
+    </div>
+    <div>
+        <a href="{{ url_for('view_graphs', course_type='PG', filepath=filepath) }}">View PG Graphs</a>
+        <a href="{{ url_for('view_table', course_type='PG', filepath=filepath) }}">View PG Table</a>
+    </div>
+</body>
+</html>

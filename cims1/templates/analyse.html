@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and background styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #212121;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main section styling */
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        h2 {
+            font-family: 'Times New Roman', Times, serif;
+            color: #e25164; /* Coral color for a warm tone */
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            font-family: 'Times New Roman', Times, serif;
+            color: #cb4956;
+            font-size: 20px;
+            margin-bottom: 10px;
+            display: block;
+            text-align: center;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 0 auto 20px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Button styles */
+        button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            background-color: #e25164;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #cb4956;
+            transform: translateY(-3px);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #212121;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            label {
+                font-size: 18px;
+            }
+
+            input[type="file"] {
+                max-width: 100%;
+            }
+
+            button {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <p>COMMUNITY INSTITUTE OF MANAGEMENT STUDIES</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+           
+            <a href="/analyse">Analysis</a>
+        </nav>
+    </header>
+
+    <!-- Main Section for File Upload -->
+    <main>
+        <h2 style="color: black;">Upload CSV file for Graph Analysis</h2>
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+            <label for="file">Choose file</label>
+            <input type="file" name="file" id="file" accept=".csv">
+            <button type="submit">Upload</button>
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Community Institute of Management Studies, Bengaluru. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
